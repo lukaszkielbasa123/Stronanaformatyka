@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <title>Firma Budowlana</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function deleteText() {
+            document.getElementById('inputfield').value = '';
+        }
+        const scrollLinks = document.querySelectorAll('.navbutton');
+        function deleteText2(){
+            var input1 = document.getElementById('input1');
+            var input2 = document.getElementById('input2');
+            var input3 = document.getElementById('input3');
+
+            input1.value = '';
+            input2.value = '';
+            input3.value = '';
+        }
+        scrollLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="logo"> 
+            <div id="logobga">
+
+            </div>
+            
+            <div>
+                <img id="logoimg" src="images/logo.png"/>
+                <p>Sausage-Bud</p>
+            </div>
+        </div>
+        <div id="navigation">
+            <a href="#oferta" class="navbutton">oferta</a>
+            <a href="#about" class="navbutton">o nas</a>
+            <a href="#portfolio" class="navbutton">portfolio</a>
+            <a href="#contactform" class="navbutton">kontakt</a>
+
+        </div>
+        <div class="mainimage">
+            <img src="images/mainimg.jpg" id="image"/>
+
+        </div>
+        <div class="email">
+            <div class="overlay">
+                <div class="emailcontent">
+                    <p>Podaj nam swój e-mail lub numer telefonu, a my siê odezwiemy.</p>
+                    <input type="text" id="inputfield" placeholder="Podaj adres e-mail lub numer telefonu" />
+                    <button onclick="deleteText()" id="sendbutton">Wyœlij</button>
+                </div>
+            </div>
+        </div>
+        <div id="oferta">
+            <h1 align="center" style="font-size: 2vw;">Oferta</h1>
+
+            <div id="offercontainer">
+                <div class="divofferimg"><img src="images/projekt.png" /></div>
+                <div class="divofferimg"><img src="images/dom.jpg" /></div>
+                <div class="divofferimg"><img src="images/remont.jpeg" /></div>
+                <div class="offertext">
+                    <p>Wykonywanie projektów</p>
+                    <p style="margin-left: 10vw;">Budowa domów jednorodzinnych</p>
+                    <p style="margin-left: 9.5vw;">Remonty i modernizacje</p>
+                </div>
+                <div style="clear: both"></div>
+                <div class="divofferimg"><img src="images/biuro.jpg"/></div>
+                <div class="divofferimg"><img src="images/wykonczeniowe.jpg"/></div>
+                <div class="divofferimg"><img src="images/energooszczedne.jpg"/></div>
+                <div class="offertext">
+                    <p style="margin-left: -1vw;">Budowa obiektów komercyjnych</p>
+                    <p style="margin-left: 10vw;">Prace wykoñczeniowe</p>
+                    <p style="margin-left: 11vw;">Energooszczêdne rozwi¹zania</p>
+            </div>
+        </div>
+         </div>
+        <div class="interlude">
+            <div style="width: 60%; height: 100%; float: left;">
+                <p style="margin-left: 20vw; padding-top: 0.3vw;">Szukasz profesjonalnej ekipy budowlanej?</p><br />
+                <p style="margin-left: 20vw;">Nie czekaj!</p>
+            </div>
+            <div style="width: 40%; height: 100%; float:left;">
+                <a href="#contactform" style="float: left;">
+                    <button >Formularz kontaktowy</button>
+                </a>
+            </div>
+        </div>
+        <div id="about">
+            <div class="bordertop"></div>
+            <div id="aboutimg"><img src="images/aboutimg.jpg"/></div>
+            <div id="aboutcontent">
+            <h1 style="text-align: justify; margin-left: 4vw; margin-right: 2vw; margin-top: 2vw;">O nas</h1>
+            <p id="abouttext">
+                Firma Budowlana Sausage-bud to profesjonalne przedsiêbiorstwo budowlane z wieloletnim doœwiadczeniem w bran¿y. Specjalizujemy siê w kompleksowych us³ugach budowlanych, zapewniaj¹c naszym klientom najwy¿sz¹ jakoœæ, terminowoœæ oraz satysfakcjê z wykonanej pracy. Nasza firma sk³ada siê z zespo³u wykwalifikowanych i zaanga¿owanych ekspertów budowlanych, którzy s¹ gotowi podj¹æ siê ró¿norodnych projektów, niezale¿nie od ich skali czy z³o¿onoœci.<br /><br />
+                Nasz¹ misj¹ jest dostarczanie us³ug budowlanych najwy¿szej jakoœci, które przekraczaj¹ oczekiwania naszych klientów. D¹¿ymy do doskona³oœci w ka¿dym projekcie, dbaj¹c o szczegó³y, precyzjê i terminowoœæ. Naszym celem jest nie tylko zadowolenie klientów, ale tak¿e budowanie trwa³ych relacji opartych na zaufaniu i profesjonalizmie.
+            </p></div>
+            
+            <div id="borderdown"></div>
+        </div>
+        <div id="portfolio">
+            <h1 style="text-align:center;">Nasze poprzednie realizacje</h1>
+            <div class="portfolioimg"><img src="images/portfolio1.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio2.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio3.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio4.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio5.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio6.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio7.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio8.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio9.jpg"/></div>
+            <div class="portfolioimg"><img src="images/portfolio10.jpg"/></div>
+        </div>
+        <div id="contactform">
+            <h1>Kontakt</h1>
+            <input type="text" class="contactinput" placeholder="Imiê i nazwisko" id="input1" />
+            <input type="text" class="contactinput" placeholder="Numer telefonu" id="input2" />
+            <input type="text" class="contactinput" placeholder="Adres E-mail" id="input3" /><br />
+            <button id="contactbutton" onclick="deleteText2()">Wyœlij</button>
+        </div>
+        <div class="contact">
+            <img src="images/tel.jpg" style="height: 4vw; float:left; margin-left: 20vw; margin-top: 0.5vw;"/>
+            <p style="float:left; margin-left: 1vw; margin-top: 1.5vw;">Tel.: 123456789</p>
+            <p style="float:left; margin-left: 14vw;">E-mail: biuro@sausage-bud.pl</p>
+        </div>
+        <div class="footer">
+            Sausage-bud &copy; Wszelkie prawa zastrzerzone
+        </div>
+
+    </body>
+</html>
